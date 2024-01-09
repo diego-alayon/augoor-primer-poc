@@ -1,6 +1,7 @@
 "use client"
 import {ThemeProvider} from '@primer/react'
 import {Button, ButtonGroup, ActionMenu, ActionList} from '@primer/react'
+import AgGridTableMenuDemo from './components/AgGridTableMenuDemo'
 
 const count = 4;
 
@@ -15,35 +16,7 @@ export default function Home({count}) {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
       </ButtonGroup>
-
-  <ActionMenu>
-    <ActionMenu.Button>Open menu</ActionMenu.Button>
-    <ActionMenu.Overlay width="medium">
-      <ActionList>
-        <ActionList.Item onSelect={() => alert('Copy link clicked')}>
-          Copy link
-          <ActionList.TrailingVisual>⌘C</ActionList.TrailingVisual>
-        </ActionList.Item>
-        <ActionList.Item onSelect={() => alert('Quote reply clicked')}>
-          Quote reply
-          <ActionList.TrailingVisual>⌘Q</ActionList.TrailingVisual>
-        </ActionList.Item>
-        <ActionList.Item onSelect={() => alert('Edit comment clicked')}>
-          Edit comment
-          <ActionList.TrailingVisual>⌘E</ActionList.TrailingVisual>
-        </ActionList.Item>
-        <ActionList.Divider />
-        <ActionList.Item
-          variant="danger"
-          onSelect={() => alert('Delete file clicked')}
-        >
-          Delete file
-          <ActionList.TrailingVisual>⌘D</ActionList.TrailingVisual>
-        </ActionList.Item>
-      </ActionList>
-    </ActionMenu.Overlay>
-  </ActionMenu>
-
+      <AgGridTableMenuDemo/>
     </ThemeProvider>
     </>
 
